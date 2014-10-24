@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Ping Pong!</name>
+    <author>Hans Saurer</author>
+    <version>1.0.0</version>
+    <description>A simple Ping Pong game.</description>
+    <files>
+        <filename>mod_pingpong.xml</filename>
+        <filename module="mod_pingpong">mod_pingpong.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>js/index.html</filename>
+        <filename>js/pingpong.js</filename>
+    </files>
+
+    <config>
+	    <fields name="params">
+            <fieldset name="basic">
+                <field name="playgroundwidth" type="text" default="100" label="Breite:(%)" description="Breite der Spielfläche in Prozent" filter="integer" />
+                <field name="playgroundheight" type="text" default="400" label="Höhe:(px)" description="Höhe der Spielfläche in Pixeln" filter="integer" />
+            </fieldset>
+        </fields>	
+    </config>
+</extension>
